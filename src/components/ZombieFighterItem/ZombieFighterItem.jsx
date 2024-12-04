@@ -1,15 +1,13 @@
-const ZombieFighterItem = ({ name, price, strength, agility, img }) => {
+const ZombieFighterItem = ({ zombieFighter, handleAddFighter }) => {
     return (
-        <ul>
             <li>
-                <h3>Name: {name}</h3>
-                <p>Price: {price}</p>
-                <p>Strength: {strength}</p>
-                <p>Agility: {agility}</p>
-                <img src={img} />
-                <button>Add to Team</button>
+                <h3>Name: {zombieFighter.name}</h3>
+                <p>Price: ${zombieFighter.price}</p>
+                <p>Strength: {zombieFighter.strength}</p>
+                <p>Agility: {zombieFighter.agility}</p>
+                <img src={zombieFighter.img} />
+                <button onClick={() => handleAddFighter(zombieFighter.id)}>Add to Team</button>
             </li>        
-        </ul>
     );
   };
   
