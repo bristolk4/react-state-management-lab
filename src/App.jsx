@@ -2,6 +2,7 @@ import {useState} from 'react'
 import ZombieFighterItem from "./components/ZombieFighterItem/ZombieFighterItem.jsx";
 import './App.css'
 
+//Fiona helped me with a lot of this thank you Fiona
 const App = () => {
 const [team, setTeam] = useState([])
 const [totalStrength, setTotalStrength] = useState(0)
@@ -105,7 +106,7 @@ const handleAddFighter = (zombieFighter) => {
 }
 const handleRemoveFighter = (zombieFighter) => {
     const fighterIndex = team.indexOf(zombieFighter)
-    const filterFunction = (_, index) => {index !== fighterIndex}
+    const filterFunction = (_, index) => {index !== fighterIndex} //I DO NOT UNDERSTAND THIS FIONA TRIED TO EXPLAIN IT TO ME BUT ???
     const newTeam = team.filter(filterFunction)
     const newTotalStrength = (totalStrength - zombieFighter.strength)
     const newTotalAgility = (totalAgility - zombieFighter.agility)
